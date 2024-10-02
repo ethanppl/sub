@@ -3,5 +3,6 @@
     COPY . .
 
     RUN ls -lah
-    RUN ls -lah /run/
-    RUN ls -lah /run/secrets/
+
+    RUN --mount=type=secret,id=ENV_ONE cat /run/secrets/ENV_ONE
+    RUN --mount=type=secret,id=SERVICE_NAME cat /run/secrets/SERVICE_NAME
