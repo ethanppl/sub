@@ -3,4 +3,5 @@
     COPY . .
 
     RUN ls -lah
+    RUN ls -lah /run/
     RUN ls -lah /run/secrets/
